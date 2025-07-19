@@ -1,0 +1,8 @@
+target/
+**/*.contract
+**/*.wasm
+Cargo.lock
+/coverage/
+/src/coverage/
+substrate-contracts-node
+substrate-contracts-node-linux.tar.gz
