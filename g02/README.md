@@ -91,26 +91,34 @@
  Este es el trabajo del grupo que tenía problemas de gente que tiraba del carro y gente que era llevada, según contaban en las consultas. No se si desaprobarlos o no porque por un lado, no cumplen con los requerimientos mínimos (por dos puntos), pero por otro, el resto del trabajo está bastante bien en términos generales. Yo lo que haría en aprobarlos pero apartarlos y seriamente discutir si tienen la intención de continuar con la segunda entrega, y considerar dividir el grupo.
 
 [1]  Cumple. Aunque Publicación y Producto son una sola estructura.
+
 [2]  El contrato compila y funcional. Aunque no hay “Publicaciones” y faltan algunas funcionalidades como poder visualizar los propios productos publicados y modificar roles de usuario luego del registro. Pero las que sí están implementadas funcionan.
-[3]  Tarpaulin arroja un **%89.08** de coverage.
- test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
+
+[3]  Tarpaulin arroja un **%89.08** de coverage. No tiene tests E2E.
+ ```test result: ok. 26 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.07s
  Jul 25 17:01:16.853  INFO cargo_tarpaulin::report: Coverage Results:
  || Tested/Total Lines:
  || marketplace_principal/lib.rs: 106/119 +0.00%
  ||
  89.08% coverage, 106/119 lines covered, +0.00% change in coverage
- No tiene tests E2E.
+ ```
+
 [4]  En cuanto a estructura y comentarios auxiliares a la documentación, está bien. Se ve que distintas personas escribieron distintas partes del código por estilos ligeramente distintos, pero no es súper notorio ni dificulta el entendimiento del mismo.
-[5]  Las funciones muestran los posibles errores y valores de retorno, pero no tienen ejemplos. registrar_usuario_interno, crear_producto_seguro, crear_nueva_orden, actualizar_estado_orden, no tienen documentación clara (sólo dicen “Lógica interna de metodo_publico() tal” y no explicitan cuál es esa lógica). Mismo la sección de funciones auxiliares y ENUMS, no se explayaron mucho.
+
+[5]  Las funciones muestran los posibles errores y valores de retorno, pero no tienen ejemplos. `registrar_usuario_interno`, `crear_producto_seguro`, `crear_nueva_orden`, `actualizar_estado_orden`, no tienen documentación clara (sólo dicen “Lógica interna de metodo_publico() tal” y no explicitan cuál es esa lógica). Mismo la sección de funciones auxiliares y ENUMS, no se explayaron mucho.
+
 [6] Aunque no hay Publicaciones, Producto es la única estructura que hay.
+
 [7] Aunque no vea la lista de productos, si intento hacer otra compra del mismo producto (id = 0, originalmente con stock = 1),provoca un error "StockInsuficiente".
+
 [8] Aunque no vea la lista de órdenes, si intento hacer que el vendedor le cambie el estado a “enviada” (orden_id = 0), muestra en pantalla que "Contract call will be successful!".
+
 [9] Ver aquí: https://shibuya.subscan.io/wasm_contract/WJ8nHZ8n4P9k8193yWK2oLgoFiWvNVJg2WJhZ8oom59NikM?tab=transaction
 
 ---
 
 **Resultado general:**
-- [ O ] APROBADO
+- [x] APROBADO
 - [ ] DESAPROBADO
 
 ---

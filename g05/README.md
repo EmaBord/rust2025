@@ -91,10 +91,16 @@
  No tengo mucho para decir. Muy completo, muy bien el manejo de errores, funciona bastante bien.
 
 [1] No cumple estrictamente. Producto sólo incluye nombre, descripción y categoría. El precio unitario de cada producto está en el struct Publicacion (publicacion.rs), y el stock de cada producto que tiene un usuario está en el struct StockProductos dentro de usuario.rs
-[2] Cumple. Ver en producto.rs pub(crate) fn _ver_stock_propio(..) y obtener_stock_productos(…) en usuario.rs permite ver los IDs de los productos propios y su stock, aunque no el resto de su información.
+
+[2] Cumple. Ver en producto.rs `pub(crate) fn _ver_stock_propio(..)` y `obtener_stock_productos(…)` en usuario.rs permite ver los IDs de los productos propios y su stock, aunque no el resto de su información.
+
 [3] Aclaración: en el código “Pedido” es “Orden de compra”.
+
 [4] Aclaración: “Enviado” es “Despachado”.
-[5]  test result: ok. 177 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s
+
+[5]   No llega al 85%, pero creo que se debe a la forma de organizar el código (structs: %89.62, lib.rs: 44.34%).
+`test result: ok. 177 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.42s`
+ ```
  Jul 25 18:09:47.651  INFO cargo_tarpaulin::report: Coverage Results:
  || Tested/Total Lines:
  || lib.rs: 47/106 +0.00%
@@ -103,23 +109,33 @@
  || structs/publicacion.rs: 66/75 +0.00%
  || structs/usuario.rs: 136/152 +0.00%
  ||
- **81.71% coverage**, 496/607 lines covered, +0.00% change in coverage
- No llega al 85% pero creo que se debe a la froma de organizar el código (structs: %89.62, lib.rs: 44.34%).
+ 81.71% coverage, 496/607 lines covered, +0.00% change in coverage
+ ```
+
 [6]  Estructura dentro del lib.rs por un lado los ink!messages y por otro lado los “imports propios”, utiliza estos imports para hacer llamados a usuario.rs, publicacion.rs, etc. donde se implementan en sí los métodos y variables de cada estructura. Tiene Storage y el impl ink! más abajo. Muy limpio y modularizado. Documental frugal pero concisa. No es tal cual como lo dado en clase, pero está bien realizado. Sin embargo, a mi parecer cambiar de nombre a las cosas, como “Compras” en vez de “Órdenes” o “Despachado” en vez de “Enviado” genera bastante confusión a la hora de leer el código. Es algo a lo que te tenés que acostumbrar…
+
 [7] Las funciones especifican los posibles errores y valores de retorno, pero no tienen ejemplos. A pesar de eso, es muy completa y clara en su simpleza, con muchos comentarios que ayudan muchísimo a la legibilidad.
-[8] Sólo prueba explícitamente con comprador en usuario.rs registrar_usuario_funciona_correctamente(). Sin embargo, en es_comprador_y_es_vendedor_funcionan_correctamente() se testea la creación de todos los roles. Además, en otros tests que no tienen que ver con la creación de usuarios en sí, se revisa que los usuarios de distintos roles sean creados correctamente mediante is_ok().
+
+[8] Sólo prueba explícitamente con comprador en usuario.rs `registrar_usuario_funciona_correctamente(..)`. Sin embargo, en `es_comprador_y_es_vendedor_funcionan_correctamente(..)` se testea la creación de todos los roles. Además, en otros tests que no tienen que ver con la creación de usuarios en sí, se revisa que los usuarios de distintos roles sean creados correctamente mediante `is_ok()`.
+
 [9] Aclaración: “Orden” es “Pedido”.
-[10] Aclaración: “Enviado” es “Despachado”. fn compra_despachada_exitoso() testea Pendiente → Despachado. fn reclamar_fondos_exitoso() testea Despachado → Recibido.
+
+[10] Aclaración: “Enviado” es “Despachado”. `fn compra_despachada_exitoso()` testea Pendiente → Despachado. `fn reclamar_fondos_exitoso()` testea Despachado → Recibido.
+
 [11] Y el repertorio es muy completo.
+
 [12] Al publicar Producto podemos publicar nombre, descripción, categoría y stock inicial, pero no precio. Y al realizar Publicación le podemos establecer un precio y decidir cuanta cantidad vender del stock que tiene el producto.
+
 [13] Al cambiar el estado a enviado (“Despachado”) con un Comprador sale "TransaccionInexistente" en vez de “SoloVendedorPuede”.
+
 [14] Cambiando el estado a Recibido con un Vendedor sale "PedidoInexistente" pero no “SoloCompradorPuede”.
+
 [15] Ver aquí: https://shibuya.subscan.io/wasm_contract/aaUgbgCYnjHr6MVU2rNNnrp37zLM5jyZmpkUeXr48Zrvccx?tab=timeline
 
 ---
 
 **Resultado general:**
-- [ O ] APROBADO
+- [x] APROBADO
 - [ ] DESAPROBADO
 
 ---
