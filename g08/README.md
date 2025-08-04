@@ -95,7 +95,8 @@
 
 > Anotar aquí cualquier observación relevante (errores encontrados, código confuso, validaciones ausentes, recomendaciones, etc.)
 
- > Este código se me hizo muy dificil de leer y seguir. De no ser por la documentación creo que me hubiera rendido. Las órdenes de compra están demasiado rotas para aprobar… El stock no se maneja bien, permitiendo que se realicen sobre-ventas. Tampoco se respetan los cambios de roles requeridos, pero me hace falta testear más a fondo para determinar si la lógica que diseñaron e implementaron funciona 100% bien.
+ > Este código se me hizo muy dificil de leer y seguir. De no ser por la documentación creo que me hubiera rendido. Las órdenes de compra están demasiado rotas para aprobar… El stock no se maneja bien, permitiendo que se realicen sobre-ventas. Tampoco se respetan los cambios de roles requeridos, pero me hace falta testear más a fondo para determinar si la lógica que diseñaron e implementaron funciona 100% bien. Me da pena porque se nota el esmero. Se me ocurre que no llegaron a hacer testeos manuales al contrato ya desplegado y al ver que los tests de unidad corrían, se durmieron en los laureles.
+
 
 [1] Cumple. Pero no debería poder cambiar rol de Vendedor a Comprador, no cumple con los requerimientos discutidos en las consultas. Sin embargo, construyeron cierta lógica para manejar eso.
 
