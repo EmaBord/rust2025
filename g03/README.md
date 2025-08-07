@@ -96,7 +96,6 @@
 - Existen algunos fallos ortográficos o gramaticales, como es el caso de `test_crear_producto_falla_si_ya_esxiste()`.
 - El stock puede establecerse al crear el producto (A pesar de que no haya vendedores que provean tal producto).
 - La implementación de `recibir_producto()` y `enviar_producto()` permiten a *cualquier* comprador y vendedor, respectivamente, realizar el cambio de estado de la orden. ![Imagen mostrando como la cuenta JoacoSlime3_Rust2025 no posee el id del vendedor de la orden0](envio_de_producto_falsificado_1.png) ![Imagen mostrando como la cuenta JoacoSlime3_Rust2025 es capaz de establecer la orden como "enviada"](envio_de_producto_falsificado_2.png)
-- No está implementada la funcionalidad para cancelar compras.
 - Sería mejor utilizar, en los tests, los datos esperados como resultado en vez de checkear datos en específicos luego de obtener el resultado. Similar a como se mostró la utilización de `assert_eq!(esperado,resultado);`.
 
 ---
