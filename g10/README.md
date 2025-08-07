@@ -90,7 +90,7 @@
 - La documentación es insuficiente y la estructura del código es poco legible. Hay largas lineas de código y las estructuras de datos no poseen métodos para delegar responsabilidades.
 - Al modificar los roles del usuario, no se verifica que este solo pueda agregarse roles y no quitarselos. Permite así pasar de `Ambos` o `Vendedor` a solamente `Comprador`, por ejemplo.
 - El contrato permite que se cree una publicación con datos vacios y en 0.
-- La cancelación de las ordenes está implementada correctamente.
+- La cancelación de las ordenes no retorna el stock a la publicación.
 - Resultan insuficientes los test de:
     - Registro de usuarios con distintos roles: Solo se posee para `Comprador`.
     - Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones con cantidad o precio `0`, o nombre, descripción, o categoría vacíos. ![](publicacion_invalida.png)
