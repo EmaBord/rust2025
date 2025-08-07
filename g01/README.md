@@ -99,6 +99,7 @@
 - Aunque se poseen casos de prueba donde se intenta validar los permisos del usuario, estos son insuficientes y son dependientes de otros casos de testeo.
 - Existe una falla en la lógica que hace posible eliminarse roles al usar la función `agregarRol()` teniendo ya el rol de `Ambos`. Permitiendo, por ejemplo, cambiar del rol `Comprador` a `Ambos`, para posteriormente pasar a tener únicamente el rol `Vendedor`. ![El usuario posee el rol de Vendedor](exploit_cambio_rol_1.png) ![El usuario pasa a tener el rol de Ambos](exploit_cambio_rol_2.png) ![Se puede observar que el usuario puede agregarse otros roles pese a poseer ambos](exploit_cambio_rol_3.png) ![Ahora el usuario psoee solo el rol de Comprador](exploit_cambio_rol_3.png)
 - En la gran mayoría de casos, los test no verifican el estado final del sistema. Por ejemplo, verifica que al intentar marcar una orden como enviada se generen los errores correspondientes en los debidos momentos, pero no existe test que verifique que, si no hay errores, el estado de la orden de compra haya efectivamente cambiado.
+- Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones con stock o precio `0`.
 
 ---
 

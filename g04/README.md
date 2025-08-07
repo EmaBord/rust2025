@@ -43,7 +43,7 @@
 #### Set mínimo de pruebas obligatorio:
 - [ ] Test de registro de usuario con cada rol posible.
 - [x] Test de publicación de producto.
-- [x] Test de compra de producto y generación de orden.
+- [ ] Test de compra de producto y generación de orden.
 - [x] Test de cambio de estado de la orden (`pendiente` → `enviado` → `recibido`).
 - [x] Test de validación de permisos (solo quien corresponde puede ejecutar cada acción).
 - [ ] Test de errores esperados (ej: intentar comprar sin stock, cambiar estado sin permisos, etc.).
@@ -93,6 +93,8 @@
 - El stock es reducido de un "Deposito" al crear una publicación. Este comportamiento es erroneo, el comportamiento esperado es que el stock sea reducido del stock publicado al momento de crear la orden de compra, lo cual no sucede. Además, el stock debe reducirse de una publicación al crear la orden de compra, lo cual no sucede. ![Se puede crear la misma orden multiples veces](orden_duplicada.png)
 - No existen tests para la creación de diferentes usuarios con roles distintos. Tampoco la verificación de que un usuario no pueda quitarse roles.
 - Los cambios de estado se deberían de almacenar correctamente, sin embargo es imposible consultarlos via RPC, pues no hay métodos disponibles para hacer esto.
+- Test de creación de orden: No posee tests que verifiquen que no sea posible crear ordenes de compra con stock `0`.
+- Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones con stock `0`.
 
 ---
 

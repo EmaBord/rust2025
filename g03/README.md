@@ -42,7 +42,7 @@
 
 #### Set mínimo de pruebas obligatorio:
 - [ ] Test de registro de usuario con cada rol posible.
-- [x] Test de publicación de producto.
+- [ ] Test de publicación de producto.
 - [x] Test de compra de producto y generación de orden.
 - [x] Test de cambio de estado de la orden (`pendiente` → `enviado` → `recibido`).
 - [ ] Test de validación de permisos (solo quien corresponde puede ejecutar cada acción).
@@ -97,11 +97,12 @@
 - El stock puede establecerse al crear el producto (A pesar de que no haya vendedores que provean tal producto).
 - La implementación de `recibir_producto()` y `enviar_producto()` permiten a *cualquier* comprador y vendedor, respectivamente, realizar el cambio de estado de la orden. ![Imagen mostrando como la cuenta JoacoSlime3_Rust2025 no posee el id del vendedor de la orden0](envio_de_producto_falsificado_1.png) ![Imagen mostrando como la cuenta JoacoSlime3_Rust2025 es capaz de establecer la orden como "enviada"](envio_de_producto_falsificado_2.png)
 - Sería mejor utilizar, en los tests, los datos esperados como resultado en vez de checkear datos en específicos luego de obtener el resultado. Similar a como se mostró la utilización de `assert_eq!(esperado,resultado);`.
+- Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones (ni productos) con stock o precio `0`, o nombre o descripción vacíos.
 
 ---
 
 **Resultado general:**
-- [x] APROBADO
-- [ ] DESAPROBADO
+- [ ] APROBADO
+- [x] DESAPROBADO
 
 ---
