@@ -98,8 +98,3 @@
 
 ---
 
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
