@@ -122,11 +122,5 @@
 
 [9] Ver aquí: https://shibuya.subscan.io/wasm_contract/WJ8nHZ8n4P9k8193yWK2oLgoFiWvNVJg2WJhZ8oom59NikM?tab=transaction
 
----
 
-**Resultado general:**
-- [x] APROBADO
-- [ ] DESAPROBADO
-
----
 
