@@ -99,10 +99,4 @@
 - Sería mejor utilizar, en los tests, los datos esperados como resultado en vez de checkear datos en específicos luego de obtener el resultado. Similar a como se mostró la utilización de `assert_eq!(esperado,resultado);`.
 - Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones (ni productos) con stock o precio `0`, o nombre o descripción vacíos.
 
----
 
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
