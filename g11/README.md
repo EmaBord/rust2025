@@ -95,10 +95,4 @@
 - Resultan insuficientes los test de registro de usuarios con distintos roles: No se verifica que el registre funcione y asigne el rol correcto a los usuarios que deseen registrarse con el rol `Ambos`
 - Los tests están divididos de manera confusa y poco atómica. Sería mucho más recomendable dividirlos por módulo y caso, por ejemplo, en vez de tener `test_flujo_completo_exitoso()` y `test_errores_permisos_y_parametros`, se debería de tener `registro_de_usuarios()` (donde se registre un usuario de cada tipo y verifique su rol luego de registrado), `registro_de_usuario_ya_registrado()` (donde se verifique que falla al intentar registrar un usuario ya presente), y así con los demás test. Por otro lado, los tests están, sin contar los de registro, completos.
 
----
 
-**Resultado general:**
-- [x] APROBADO
-- [ ] DESAPROBADO
-
----
