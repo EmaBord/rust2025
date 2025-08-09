@@ -241,11 +241,5 @@ Creo… que como `cambiar_estado()` no chequea que el usuario caller esté regis
 
 [23] Cumple. Ver https://shibuya.subscan.io/wasm_contract/Y6tvgmeT3HrUYXzCp4jWXjsbeGvnTG7N2yidMFr75jUmenu?tab=transaction
 
----
 
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
 
