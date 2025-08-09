@@ -139,11 +139,5 @@
 
 [15] Ver aquí: https://shibuya.subscan.io/wasm_contract/aaUgbgCYnjHr6MVU2rNNnrp37zLM5jyZmpkUeXr48Zrvccx?tab=timeline
 
----
 
-**Resultado general:**
-- [x] APROBADO
-- [ ] DESAPROBADO
-
----
 
