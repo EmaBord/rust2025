@@ -178,11 +178,5 @@ historial_productos: Mapping<u32, (Producto, u32)>,
 
 [22] Cumple. No encontré el contrato en Subscan https://alephzero.subscan.io/account/5CQdp3P2RT4eHSxRU8o1RBWTs4dmTwjycub92HyGdjpTnexP, pero confío.
 
----
 
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
 
