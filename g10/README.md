@@ -98,10 +98,4 @@
     - Test de cambio de estado de la orden: No posee tests que verifiquen que el producto no pueda pasar directamente a `recibido`, ni test que verifiquen que no es posible retroceder a `pendiente` o `enviado` cuando el estado es `recibido`.
 - El estado de las ordenes no puede ser consultado mediante RPC, no se poseen metodos para realizar esta acción.
 
----
 
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
