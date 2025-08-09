@@ -101,10 +101,3 @@
 - En la gran mayoría de casos, los test no verifican el estado final del sistema. Por ejemplo, verifica que al intentar marcar una orden como enviada se generen los errores correspondientes en los debidos momentos, pero no existe test que verifique que, si no hay errores, el estado de la orden de compra haya efectivamente cambiado.
 - Test de publicación de productos: No posee tests que verifique que no sea posible crear publicaciones con stock o precio `0`.
 
----
-
-**Resultado general:**
-- [ ] APROBADO
-- [x] DESAPROBADO
-
----
